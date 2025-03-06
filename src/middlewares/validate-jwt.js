@@ -32,7 +32,7 @@ export const validateJWT = async (req, res, next) => {
             });
         }
 
-        req.user = user;
+        req.usuario = user;
         next();
     } catch (err) {
         return res.status(500).json({

@@ -14,7 +14,7 @@ export const defaultAdmin = async () => {
             surname: "Lux", 
             username: "Kernel", 
             email: "emiliojo.lux@gmail.com", 
-            password: await hash("emLo06.20#"), 
+            password: await hash("EmLo06.20#"), 
             phone: "12345678", 
             role: "ADMIN_ROLE", 
             status: true 

@@ -1,18 +1,18 @@
 export const hasRoles = (...roles) => {
-    return (req, res, next) =>{
-        if(!req.usuario){
+    return (req, res, next) => {
+        if (!req.usuario) {
             return res.status(500).json({
                 success: false,
-                message: "Se quiere verificar un role antes de validar el token"
-            })
+                message: "A role needs to be verified before validating the token"
+            });
         }
 
-        if(!roles.includes(req.usuario.role)){
+        if (!roles.includes(req.usuario.role)) {
             return res.status(401).json({
                 success: false,
-                message:`El servicio requiere uno de estos roles ${roles}`
-            })
+                message: `The service requires one of these roles: ${roles}`
+            });
         }
-        next()
-    }
-}
+        next();
+    };
+};
