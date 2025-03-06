@@ -6,8 +6,10 @@ import helmet from "helmet"
 import morgan from "morgan"
 import { dbConnection } from "./mongo.js"
 import {defaultAdmin} from "./defaultAdmin.js"
+import {defaultCategory} from "./defaultCategory.js"
 import apiLimiter from "../src/middlewares/rate-limit-validators.js"
 import authRoutes from "../src/auth/auth.router.js"
+import categoryRoutes from "../src/category/category.router.js"
 
 
 const middlewares = (app) => {
@@ -21,6 +23,8 @@ const middlewares = (app) => {
 
 const routes = (app) => {
     app.use("/storeManagement/v1/auth", authRoutes)
+    app.use("/storeManagement/v1/category", categoryRoutes)
+
 }
 
 const conectarDB = async () => {
@@ -39,6 +43,7 @@ export const initServer = () =>{
         conectarDB();
         routes(app);
         defaultAdmin();
+        defaultCategory();
         const port = process.env.PORT || 3001;
         app.listen(port, () => {
             console.log(`Server running on port ${port}`);
