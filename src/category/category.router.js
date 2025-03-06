@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { addCategory, deleteCategory, getCategory, updateCategory } from "./category.controller.js";
-import { createCategoryValidator, deleteCategoryValidator, updateCategoryValidator } from "../middlewares/category-validators.js";
+import { createCategoryValidator, deleteCategoryValidator, updateCategoryValidator } from "../middlewares/category-validator.js";
 
 const router = Router();
 
