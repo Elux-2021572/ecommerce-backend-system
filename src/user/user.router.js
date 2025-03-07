@@ -1,22 +1,20 @@
 import { Router } from "express";
-import { deleteUser, updateRol, updateUser, updateUserProfile, updateProfilePicture, updatePassword } from "./user.controller.js";
-import { deleteUserValidator, updateRolValidator, updateUserValidator, updateProfileValidator, deleteProfileValidator, updateProfilePictureValidator, updatePasswordValidator } from "../middlewares/user-validators.js";
-import { uploadProfilePicture } from "../middlewares/multer-uploads.js";
+import { updateUser,deleteUser, deleteUserProfile, updateRole, updateUserProfile, updatePassword } from "./user.controller.js";
+import { deleteUserValidator, updateRolValidator, updateUserValidator, updateProfileValidator, deleteProfileValidator, updatePasswordValidator } from "../middlewares/user-validator.js";
 
 const router = Router();
 
-router.patch("/updateRol/:uid", updateRolValidator, updateRol);
-
-router.put("/updateUser/:uid", updateUserValidator, updateUser);
-
-router.delete("/deleteUser/:uid", deleteUserValidator, deleteUser);
+router.put("/updateUser/admin/:uid", updateUserValidator, updateUser);
 
 router.put("/updateProfile/:uid", updateProfileValidator, updateUserProfile);
 
-router.delete("/deleteProfile/:uid", deleteProfileValidator, deleteUser);
+router.delete("/deleteUser/admin/:uid", deleteUserValidator, deleteUser);
 
-router.patch("/updateProfilePicture/:uid", uploadProfilePicture.single("profilePicture"), updateProfilePictureValidator, updateProfilePicture);
+router.delete("/deleteProfile/:uid", deleteProfileValidator, deleteUserProfile);
 
 router.patch("/updatePassword/:uid", updatePasswordValidator, updatePassword);
+
+router.patch("/updateRol/admin/:uid", updateRolValidator, updateRole);
+
 
 export default router;

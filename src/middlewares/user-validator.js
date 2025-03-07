@@ -1,5 +1,5 @@
 import { body, param } from "express-validator";
-import { emailExists, usernameExists, userExists } from "../helpers/db-validators.js";
+import { emailExists, usernameExists, userExists, adminRole , adminRoleDelete, userUpdateProfile } from "../helpers/db-validators.js";
 import { validateFields } from "./validate-fields.js";
 import { deleteFileOnError } from "./delete-file-on-error.js";
 import { handleErrors } from "./handle-errors.js";
@@ -59,4 +59,65 @@ export const registerValidator = [
     deleteFileOnError,
     handleErrors
 ];
+
+export const updateRolValidator = [
+    validateJWT,
+    hasRoles("ADMIN_ROLE"),
+    param("uid", "It is not a valid ID").isMongoId(),
+    param("uid").custom(userExists),
+    param("uid").custom(adminRole),
+    validateFields,
+    handleErrors
+];
+
+export const deleteUserValidator = [
+    validateJWT,
+    hasRoles("ADMIN_ROLE"),
+    param("uid").isMongoId().withMessage("It is not a valid MongoDB ID"),
+    param("uid").custom(userExists),
+    param("uid").custom(adminRoleDelete),
+    validateFields,
+    handleErrors
+];
+
+export const updateUserValidator = [
+    validateJWT,
+    hasRoles("ADMIN_ROLE"),
+    param("uid", "It is not a valid ID").isMongoId(),
+    param("uid").custom(userExists),
+    param("uid").custom(adminRole),
+    validateFields,
+    handleErrors
+];
+
+export const updateProfileValidator = [
+    validateJWT,
+    hasRoles("ADMIN_ROLE", "CLIENT_ROLE"),
+    param("uid", "It is not a valid ID").isMongoId(),
+    param("uid").custom(userExists),
+    validateFields,
+    handleErrors
+];
+
+export const deleteProfileValidator = [
+    validateJWT,
+    hasRoles("ADMIN_ROLE", "CLIENT_ROLE"),
+    param("uid").isMongoId().withMessage("It is not a valid MongoDB ID"),
+    param("uid").custom(userExists),
+    body("confirmDeletion").equals("DELETE_PROFILE").withMessage("Incorrect deletion confirmation"),
+    validateFields,
+    handleErrors
+];
+
+export const updatePasswordValidator = [
+    validateJWT,
+    hasRoles("ADMIN_ROLE", "CLIENT_ROLE"),
+    param("uid").isMongoId().withMessage("It is not a valid MongoDB ID"),
+    param("uid").custom(userExists),
+    param("uid").custom(userUpdateProfile),
+    body("newPassword").isLength({ min: 8 }).withMessage("Password must be at least 8 characters long"),
+    validateFields,
+    handleErrors
+];
+
 

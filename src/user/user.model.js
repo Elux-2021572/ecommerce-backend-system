@@ -28,7 +28,7 @@ const userSchema = Schema({
     phone:{
         type: String,
         minLength: [8, "Phone must be at least 8 characters"],
-        maxLength: [8, "Phone cannot exceed 8 characters"],
+        maxLength: [11, "Phone cannot exceed 11 characters"],
         required: [true, "Phone is required"]
     },
     role:{

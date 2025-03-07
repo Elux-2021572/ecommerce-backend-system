@@ -10,6 +10,7 @@ import {defaultCategory} from "./defaultCategory.js"
 import apiLimiter from "../src/middlewares/rate-limit-validators.js"
 import authRoutes from "../src/auth/auth.router.js"
 import categoryRoutes from "../src/category/category.router.js"
+import userRoutes from "../src/user/user.router.js"
 
 
 const middlewares = (app) => {
@@ -24,7 +25,7 @@ const middlewares = (app) => {
 const routes = (app) => {
     app.use("/storeManagement/v1/auth", authRoutes)
     app.use("/storeManagement/v1/category", categoryRoutes)
-
+    app.use("/storeManagement/v1/user", userRoutes)
 }
 
 const conectarDB = async () => {
