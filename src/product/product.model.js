@@ -24,7 +24,7 @@ const productSchema = new Schema({
         ref: 'Category',
         required: true
     },
-    sales: {
+    sold: {
         type: Number,
         default: 0
     },

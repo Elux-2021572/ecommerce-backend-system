@@ -1,4 +1,6 @@
 import User from "../user/user.model.js";
+import Product from "../product/product.model.js";
+import Category from "../category/category.model.js";
 
 export const emailExists = async (email = "") => {
     const existe = await User.findOne({ email });
@@ -77,3 +79,17 @@ export const userUpdateProfile = async (uid = "", { req }) => {
         throw new Error(error.message);
     }
 };
+
+export const categoryExists = async (nameCategory = "") => {
+    const exist = await Category.findOne({nameCategory});
+    if (exist) {
+        throw new Error(`The Category: ${nameCategory} already exists`);
+    }
+};
+
+export const productExists = async (nameProduct = "") => {
+    const exist = await Product.findOne({nameProduct});
+    if (exist) {
+        throw new Error(`The product: ${nameProduct} already exists`);
+    }
+}
