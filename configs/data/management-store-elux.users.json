@@ -1,0 +1,76 @@
+[{
+  "_id": {
+    "$oid": "67cb105b36ef9825ef2b4d7b"
+  },
+  "name": "Emilio",
+  "surname": "Lux",
+  "username": "Kernel",
+  "email": "emiliojo.lux@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$DqaxtF5V+dhGZXmb8+rBTw$2zRhNtu9SURGShNx+UrxBPz0CcXj3cM5jYj4l2k31c4",
+  "phone": "12345678",
+  "role": "ADMIN_ROLE",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-07T15:27:23.389Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-07T15:27:23.389Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cb17dc87e346783084090f"
+  },
+  "name": "Admin",
+  "surname": "User",
+  "username": "adminUser",
+  "email": "admin@example.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$KAjNv10k4/WTSHraTnFJBQ$v3XVGJwRQkjuCBHY6BL9k7lPzjUfRWgIQAnFrib0ZyE",
+  "phone": "12345678",
+  "role": "ADMIN_ROLE",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-07T15:59:24.081Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-07T15:59:24.081Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cb18ed87e3467830840914"
+  },
+  "name": "Super",
+  "surname": "Admin",
+  "username": "superAdmin2",
+  "email": "admin2@example.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$0fK+OxMLfBnN7fBlVlSGTw$YXsdEDeDTcQWbJOiRQQWXRNNxnapMJfItUwXc2kMrY4",
+  "phone": "87654321",
+  "role": "ADMIN_ROLE",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-07T16:03:57.544Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-07T16:03:57.544Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cb190187e3467830840918"
+  },
+  "name": "John",
+  "surname": "DAD",
+  "username": "DAD",
+  "email": "john@example.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$Gp5KfBKK4L3lcT/eIxufBg$mnpP/nFGcDkWG9nTgJZ8UilrO8YO57PovXKLTgaaFtE",
+  "phone": "87654321",
+  "role": "CLIENT_ROLE",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-07T16:04:17.851Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-07T16:04:17.851Z"
+  }
+}]

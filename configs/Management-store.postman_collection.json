@@ -1,0 +1,945 @@
+{
+	"info": {
+		"_postman_id": "0316e671-16d7-4b93-8ff8-413a0e4c33dd",
+		"name": "Management-store",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37780367"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"emiliojo.lux@gmail.com\",\r\n    \"password\": \"EmLo06.20#\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/storeManagement/v1/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"storeManagement",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register admin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiMTA1YjM2ZWY5ODI1ZWYyYjRkN2IiLCJpYXQiOjE3NDEzNjMwNDIsImV4cCI6MTc0MTM2NjY0Mn0.cp65xM1ywK5GEx5rr96Pl9kI4k_S0FfQpjitqVFCyJc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Super\",\r\n  \"surname\": \"Admin\",\r\n  \"username\": \"superAdmin2\",\r\n  \"email\": \"admin2@example.com\",\r\n  \"password\": \"EmLo06.20#\",\r\n  \"phone\": \"87654321\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/storeManagement/v1/auth/register/admin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"storeManagement",
+						"v1",
+						"auth",
+						"register",
+						"admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M5NDUwZWE0YTY5MzUwZTljMjZiMzYiLCJpYXQiOjE3NDEyNDQ3MDcsImV4cCI6MTc0MTI0ODMwN30.5MFXcOVILFjvwuvdOtQvVpKlQsRPQqWMNjrx48R3rgQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"John\",\r\n  \"surname\": \"DAD\",\r\n  \"username\": \"DAD\",\r\n  \"email\": \"john@example.com\",\r\n  \"password\": \"Jo1#89aD\",\r\n  \"phone\": \"87654321\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/storeManagement/v1/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"storeManagement",
+						"v1",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar Categoria",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiMTA1YjM2ZWY5ODI1ZWYyYjRkN2IiLCJpYXQiOjE3NDEzNjMwNDIsImV4cCI6MTc0MTM2NjY0Mn0.cp65xM1ywK5GEx5rr96Pl9kI4k_S0FfQpjitqVFCyJc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nameCategory\": \"Sports\",\r\n  \"descriptionCategory\": \"Equipment and gear for various sports\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/storeManagement/v1/category/addCategory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"storeManagement",
+						"v1",
+						"category",
+						"addCategory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Categorias",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/storeManagement/v1/category/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"storeManagement",
+						"v1",
+						"category",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar categoria",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M5NDUwZWE0YTY5MzUwZTljMjZiMzYiLCJpYXQiOjE3NDEyNTI1MDksImV4cCI6MTc0MTI1NjEwOX0.v3ZfUGy34PM15b69rzHxZC19Zrys862RQPSmkv96nUc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"descriptionCategory\": \"Updated description\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/storeManagement/v1/category/updateCategory/67c967edae27962feed3f8ad",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"storeManagement",
+						"v1",
+						"category",
+						"updateCategory",
+						"67c967edae27962feed3f8ad"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar categoria",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M5NDUwZWE0YTY5MzUwZTljMjZiMzYiLCJpYXQiOjE3NDEyNTI1MDksImV4cCI6MTc0MTI1NjEwOX0.v3ZfUGy34PM15b69rzHxZC19Zrys862RQPSmkv96nUc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3001/storeManagement/v1/category/deleteCategory/67c967edae27962feed3f8ad",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"storeManagement",
+						"v1",
+						"category",
+						"deleteCategory",
+						"67c967edae27962feed3f8ad"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar usuario (ADMIN)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M5NDUwZWE0YTY5MzUwZTljMjZiMzYiLCJpYXQiOjE3NDEzMDY3OTAsImV4cCI6MTc0MTMxMDM5MH0.083_G3mE9zfFVZwFbwVxBLH0L0EZ6TWWTr7kMbTcZbs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"NuevoNombre\",\r\n    \"email\": \"nuevoemail@example.com\",\r\n    \"phone\": \"1234567890\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/storeManagement/v1/user/updateUser/admin/67c9450ea4a69350e9c26b36",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"storeManagement",
+						"v1",
+						"user",
+						"updateUser",
+						"admin",
+						"67c9450ea4a69350e9c26b36"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar perfil usuario",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M5NDUwZWE0YTY5MzUwZTljMjZiMzYiLCJpYXQiOjE3NDEzMDY3OTAsImV4cCI6MTc0MTMxMDM5MH0.083_G3mE9zfFVZwFbwVxBLH0L0EZ6TWWTr7kMbTcZbs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"nuevoUsername\",\r\n    \"phone\": \"0987654321\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/storeManagement/v1/user/updateProfile/67c94aa09b1148e133d61a85",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"storeManagement",
+						"v1",
+						"user",
+						"updateProfile",
+						"67c94aa09b1148e133d61a85"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar usuario (ADMIN)",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M5NDUwZWE0YTY5MzUwZTljMjZiMzYiLCJpYXQiOjE3NDEzMDY3OTAsImV4cCI6MTc0MTMxMDM5MH0.083_G3mE9zfFVZwFbwVxBLH0L0EZ6TWWTr7kMbTcZbs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/storeManagement/v1/user/deleteUser/admin/67c9493f9b1148e133d61a7f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"storeManagement",
+						"v1",
+						"user",
+						"deleteUser",
+						"admin",
+						"67c9493f9b1148e133d61a7f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar perfil de usuario",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M5NDUwZWE0YTY5MzUwZTljMjZiMzYiLCJpYXQiOjE3NDEzMDY3OTAsImV4cCI6MTc0MTMxMDM5MH0.083_G3mE9zfFVZwFbwVxBLH0L0EZ6TWWTr7kMbTcZbs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"confirmDeletion\": \"DELETE_PROFILE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/storeManagement/v1/user/deleteProfile/67c9493f9b1148e133d61a7f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"storeManagement",
+						"v1",
+						"user",
+						"deleteProfile",
+						"67c9493f9b1148e133d61a7f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cambiar rol usuario",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M5NDkzZjliMTE0OGUxMzNkNjFhN2YiLCJpYXQiOjE3NDEzMDc5NDksImV4cCI6MTc0MTMxMTU0OX0.C3x3YT8z4rxfWkjelRDXgL2OU2e3SXhRXo2D0pSMWPQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"role\": \"ADMIN_ROLE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/storeManagement/v1/user/updateRol/admin/67ca3ec841a39251b8779a78",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"storeManagement",
+						"v1",
+						"user",
+						"updateRol",
+						"admin",
+						"67ca3ec841a39251b8779a78"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar Producto",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiMTA1YjM2ZWY5ODI1ZWYyYjRkN2IiLCJpYXQiOjE3NDEzNjMwNDIsImV4cCI6MTc0MTM2NjY0Mn0.cp65xM1ywK5GEx5rr96Pl9kI4k_S0FfQpjitqVFCyJc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nameProduct\": \"Balón de Fútbol Adidas Predator\",\r\n  \"descriptionProduct\": \"High-quality football designed for precision and control in all conditions.\",\r\n  \"price\": 50,\r\n  \"stock\": 70,\r\n  \"category\": \"Sports\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/storeManagement/v1/product/addProduct",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"storeManagement",
+						"v1",
+						"product",
+						"addProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Producto",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M5NDkzZjliMTE0OGUxMzNkNjFhN2YiLCJpYXQiOjE3NDEzMzI2NzUsImV4cCI6MTc0MTMzNjI3NX0.E9lF3yKDE-D5dFsI9_u53RcNzoF7PSbgfbvhiR_is04",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/storeManagement/v1/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"storeManagement",
+						"v1",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actuazliar producto",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M5NDkzZjliMTE0OGUxMzNkNjFhN2YiLCJpYXQiOjE3NDEzMzI2NzUsImV4cCI6MTc0MTMzNjI3NX0.E9lF3yKDE-D5dFsI9_u53RcNzoF7PSbgfbvhiR_is04",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nameProduct\": \"Laptop Gamer Pro\",\r\n  \"price\": 1600\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/storeManagement/v1/product/updateProduct/67caa3b461667e5704143697",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"storeManagement",
+						"v1",
+						"product",
+						"updateProduct",
+						"67caa3b461667e5704143697"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar producto",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M5NDkzZjliMTE0OGUxMzNkNjFhN2YiLCJpYXQiOjE3NDEzMzI2NzUsImV4cCI6MTc0MTMzNjI3NX0.E9lF3yKDE-D5dFsI9_u53RcNzoF7PSbgfbvhiR_is04",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/storeManagement/v1/product/deleteProduct/67caa3b461667e5704143697",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"storeManagement",
+						"v1",
+						"product",
+						"deleteProduct",
+						"67caa3b461667e5704143697"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Productos más vendidos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M5NDkzZjliMTE0OGUxMzNkNjFhN2YiLCJpYXQiOjE3NDEzMzI2NzUsImV4cCI6MTc0MTMzNjI3NX0.E9lF3yKDE-D5dFsI9_u53RcNzoF7PSbgfbvhiR_is04",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/storeManagement/v1/product/most-sold",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"storeManagement",
+						"v1",
+						"product",
+						"most-sold"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Productos agotados",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M5NDkzZjliMTE0OGUxMzNkNjFhN2YiLCJpYXQiOjE3NDEzMzI2NzUsImV4cCI6MTc0MTMzNjI3NX0.E9lF3yKDE-D5dFsI9_u53RcNzoF7PSbgfbvhiR_is04",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/storeManagement/v1/product/sold-out",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"storeManagement",
+						"v1",
+						"product",
+						"sold-out"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Inventario",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M5NDkzZjliMTE0OGUxMzNkNjFhN2YiLCJpYXQiOjE3NDEzMzI2NzUsImV4cCI6MTc0MTMzNjI3NX0.E9lF3yKDE-D5dFsI9_u53RcNzoF7PSbgfbvhiR_is04",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/storeManagement/v1/product/inventory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"storeManagement",
+						"v1",
+						"product",
+						"inventory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar por filtros",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M5NDkzZjliMTE0OGUxMzNkNjFhN2YiLCJpYXQiOjE3NDEzMzQ3MjUsImV4cCI6MTc0MTMzODMyNX0.PmPtiokuAbpfiAtidk5WVlImiF_1uDKuyT4iUDTAsI0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/storeManagement/v1/product/filter",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"storeManagement",
+						"v1",
+						"product",
+						"filter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar producto al carrito",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiMTA1YjM2ZWY5ODI1ZWYyYjRkN2IiLCJpYXQiOjE3NDEzNjMwNDIsImV4cCI6MTc0MTM2NjY0Mn0.cp65xM1ywK5GEx5rr96Pl9kI4k_S0FfQpjitqVFCyJc",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"productId\": \"67cb1af187e3467830840936\",\r\n  \"quantity\": 8\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/storeManagement/v1/shoppingCart/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"storeManagement",
+						"v1",
+						"shoppingCart",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar productos carrito",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/storeManagement/v1/shoppingCart/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"storeManagement",
+						"v1",
+						"shoppingCart",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar producto carrito",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiMTA1YjM2ZWY5ODI1ZWYyYjRkN2IiLCJpYXQiOjE3NDEzNjMwNDIsImV4cCI6MTc0MTM2NjY0Mn0.cp65xM1ywK5GEx5rr96Pl9kI4k_S0FfQpjitqVFCyJc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"productId\": \"67cb1b1687e3467830840954\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/storeManagement/v1/shoppingCart/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"storeManagement",
+						"v1",
+						"shoppingCart",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Confirmar carrito compra",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
