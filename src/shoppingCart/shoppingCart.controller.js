@@ -1,6 +1,4 @@
 import { ShoppingCart } from './shoppingCart.model.js'
-import { Order } from '../order/order.model.js'
-import { validateCreditCard } from '../middlewares/creditCard-validator.js'
 
 
 export const addProductToCart = async (req, res) => {
@@ -91,3 +89,4 @@ export const deleteProductFromCart = async (req, res) => {
         });
     }
 };
+
