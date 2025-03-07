@@ -7,24 +7,23 @@ import { validateJWT } from "./validate-jwt.js"
 
 
 export const addProductToCartValidator = [
-    validateJWT,
-    hasRoles("ADMIN_ROLE" , "CLIENT_ROLE"),
-    body("productId").isMongoId().withMessage("Not a valid MongoDB ID"),
-    body("nameProduct").custom(productExists),
-    body("quantity").isInt({ gt: 0 }).withMessage("Quantity must be a positive integer"),
+    validateJWT, 
+    hasRoles("ADMIN_ROLE", "CLIENT_ROLE"), 
+    body("productId").isMongoId().withMessage("Not a valid MongoDB ID") .custom(productExists),
+    body("quantity").isInt({ gt: 0 }).withMessage("Quantity must be a positive integer"), 
     validateFields,
-    handleErrors];
+    handleErrors, 
+];
 
 export const getCartProductsValidator = [
-    validateFields,
-    handleErrors
+    validateFields, 
+    handleErrors,
 ];
 
 export const deleteProductFromCartValidator = [
-    validateJWT,
-    hasRoles("ADMIN_ROLE" , "CLIENT_ROLE"),
-    body("productId").isMongoId().withMessage("Not a valid MongoDB ID"),
-    body("nameProduct").custom(productExists).withMessage("The product does not exist in the database"),
-    validateFields,
-    handleErrors
+    validateJWT, 
+    hasRoles("ADMIN_ROLE", "CLIENT_ROLE"),
+    body("productId").isMongoId().withMessage("Not a valid MongoDB ID") .custom(productExists),
+    validateFields, 
+    handleErrors, 
 ];

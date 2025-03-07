@@ -13,7 +13,7 @@ import categoryRoutes from "../src/category/category.router.js"
 import userRoutes from "../src/user/user.router.js"
 import productRoutes from "../src/product/product.routes.js"
 import shoppingCartRoutes from "../src/shoppingCart/shoppingCart.router.js"
-
+import billRoutes from "../src/bill/bill.routes.js"
 
 const middlewares = (app) => {
     app.use(express.urlencoded({ extended: false}))
@@ -30,6 +30,7 @@ const routes = (app) => {
     app.use("/storeManagement/v1/user", userRoutes)
     app.use("/storeManagement/v1/product", productRoutes)
     app.use("/storeManagement/v1/shoppingCart" ,shoppingCartRoutes)
+    app.use("/storeManagement/v1/bill", billRoutes)
 }
 
 const conectarDB = async () => {

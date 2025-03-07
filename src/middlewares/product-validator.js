@@ -49,12 +49,14 @@ export const deleteProductValidator = [
 ]
 
 export const getMostSoldProductsValidator = [
+    validateJWT,
     hasRoles("ADMIN_ROLE", "USER_ROLE"),
     validateFields,
     handleErrors
 ]
 
 export const getSoldOutProductsValidator = [
+    validateJWT,
     hasRoles("ADMIN_ROLE" , "USER_ROLE"),
     validateFields,
     handleErrors
@@ -68,6 +70,7 @@ export const inventoryValidator = [
 ]
 
 export const filterProductsValidator = [
+    validateJWT,
     hasRoles("ADMIN_ROLE", "USER_ROLE"),
     body("category").optional().notEmpty().withMessage("Category is required"),
     body("sort").optional().notEmpty().withMessage("Sort is required"),

@@ -662,7 +662,7 @@
 					},
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M5NDkzZjliMTE0OGUxMzNkNjFhN2YiLCJpYXQiOjE3NDEzMzI2NzUsImV4cCI6MTc0MTMzNjI3NX0.E9lF3yKDE-D5dFsI9_u53RcNzoF7PSbgfbvhiR_is04",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiMTA1YjM2ZWY5ODI1ZWYyYjRkN2IiLCJpYXQiOjE3NDEzODI5MzQsImV4cCI6MTc0MTM4NjUzNH0.oubsQHtj7DMuk-_ju1aYb8UdUx7WORwkVFvbm_kQedQ",
 						"type": "text"
 					}
 				],
@@ -752,7 +752,7 @@
 					},
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M5NDkzZjliMTE0OGUxMzNkNjFhN2YiLCJpYXQiOjE3NDEzMzI2NzUsImV4cCI6MTc0MTMzNjI3NX0.E9lF3yKDE-D5dFsI9_u53RcNzoF7PSbgfbvhiR_is04",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiMTA1YjM2ZWY5ODI1ZWYyYjRkN2IiLCJpYXQiOjE3NDEzODI5MzQsImV4cCI6MTc0MTM4NjUzNH0.oubsQHtj7DMuk-_ju1aYb8UdUx7WORwkVFvbm_kQedQ",
 						"type": "text"
 					}
 				],
@@ -797,13 +797,13 @@
 					},
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M5NDkzZjliMTE0OGUxMzNkNjFhN2YiLCJpYXQiOjE3NDEzMzQ3MjUsImV4cCI6MTc0MTMzODMyNX0.PmPtiokuAbpfiAtidk5WVlImiF_1uDKuyT4iUDTAsI0",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiMTA1YjM2ZWY5ODI1ZWYyYjRkN2IiLCJpYXQiOjE3NDEzODI5MzQsImV4cCI6MTc0MTM4NjUzNH0.oubsQHtj7DMuk-_ju1aYb8UdUx7WORwkVFvbm_kQedQ",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "",
+					"raw": "{\r\n    \"category\": \"67cb197887e346783084091c\"\r\n}\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -834,7 +834,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiMTA1YjM2ZWY5ODI1ZWYyYjRkN2IiLCJpYXQiOjE3NDEzNjMwNDIsImV4cCI6MTc0MTM2NjY0Mn0.cp65xM1ywK5GEx5rr96Pl9kI4k_S0FfQpjitqVFCyJc",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiMTA1YjM2ZWY5ODI1ZWYyYjRkN2IiLCJpYXQiOjE3NDEzODI5MzQsImV4cCI6MTc0MTM4NjUzNH0.oubsQHtj7DMuk-_ju1aYb8UdUx7WORwkVFvbm_kQedQ",
 						"type": "text"
 					},
 					{
@@ -845,7 +845,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"productId\": \"67cb1af187e3467830840936\",\r\n  \"quantity\": 8\r\n}\r\n",
+					"raw": "{\r\n    \"productId\": \"67cb1af187e3467830840936\", // ID del producto\r\n    \"quantity\": 6 // Cantidad del producto\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -903,13 +903,13 @@
 					},
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiMTA1YjM2ZWY5ODI1ZWYyYjRkN2IiLCJpYXQiOjE3NDEzNjMwNDIsImV4cCI6MTc0MTM2NjY0Mn0.cp65xM1ywK5GEx5rr96Pl9kI4k_S0FfQpjitqVFCyJc",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiMTA1YjM2ZWY5ODI1ZWYyYjRkN2IiLCJpYXQiOjE3NDEzODI5MzQsImV4cCI6MTc0MTM4NjUzNH0.oubsQHtj7DMuk-_ju1aYb8UdUx7WORwkVFvbm_kQedQ",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"productId\": \"67cb1b1687e3467830840954\"\r\n}\r\n",
+					"raw": "{\r\n  \"productId\": \"67cb1a8f87e3467830840931\"\r\n}\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -934,7 +934,7 @@
 			"response": []
 		},
 		{
-			"name": "Confirmar carrito compra",
+			"name": "Completar compra",
 			"request": {
 				"method": "GET",
 				"header": []
