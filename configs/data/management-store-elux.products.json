@@ -1,0 +1,160 @@
+[{
+  "_id": {
+    "$oid": "67cb1a8f87e3467830840931"
+  },
+  "nameProduct": "Disco Duro Externo 2TB",
+  "descriptionProduct": "Portable external hard drive with high-speed USB 3.0 connectivity.",
+  "price": 100,
+  "stock": 40,
+  "category": {
+    "$oid": "67cb198187e3467830840920"
+  },
+  "sold": 0,
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-07T16:10:55.790Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-07T16:10:55.790Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cb1af187e3467830840936"
+  },
+  "nameProduct": "Smartphone Samsung Galaxy S21",
+  "descriptionProduct": "Flagship smartphone with 5G, powerful camera, and sleek design.",
+  "price": 799,
+  "stock": 17,
+  "category": {
+    "$oid": "67cb198187e3467830840920"
+  },
+  "sold": 0,
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-07T16:12:33.014Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-07T16:29:17.605Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cb1af787e346783084093b"
+  },
+  "nameProduct": "Bicicleta de Montaña X-Trail",
+  "descriptionProduct": "Durable mountain bike with shock absorbers and 18-speed gears.",
+  "price": 350,
+  "stock": 15,
+  "category": {
+    "$oid": "67cb197887e346783084091c"
+  },
+  "sold": 0,
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-07T16:12:39.040Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-07T16:12:39.040Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cb1afc87e3467830840940"
+  },
+  "nameProduct": "Llave Inglesa Ajustable",
+  "descriptionProduct": "Adjustable wrench made from hardened steel for strong grip.",
+  "price": 25,
+  "stock": 100,
+  "category": {
+    "$oid": "67cb197887e346783084091c"
+  },
+  "sold": 0,
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-07T16:12:44.656Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-07T16:12:44.656Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cb1b0387e3467830840945"
+  },
+  "nameProduct": "Licuadora Profesional 1500W",
+  "descriptionProduct": "High-powered blender with multiple speeds and stainless steel blades.",
+  "price": 120,
+  "stock": 50,
+  "category": {
+    "$oid": "67cb198787e3467830840924"
+  },
+  "sold": 0,
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-07T16:12:51.823Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-07T16:12:51.823Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cb1b0a87e346783084094a"
+  },
+  "nameProduct": "Sartén Anti-Adherente de 30cm",
+  "descriptionProduct": "Non-stick frying pan with heat-resistant handle and a 30cm diameter.",
+  "price": 30,
+  "stock": 80,
+  "category": {
+    "$oid": "67cb198787e3467830840924"
+  },
+  "sold": 0,
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-07T16:12:58.515Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-07T16:12:58.515Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cb1b0f87e346783084094f"
+  },
+  "nameProduct": "Chaqueta Deportiva Nike",
+  "descriptionProduct": "Breathable and comfortable sports jacket for active wear.",
+  "price": 60,
+  "stock": 40,
+  "category": {
+    "$oid": "67cb198d87e3467830840928"
+  },
+  "sold": 0,
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-07T16:13:03.848Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-07T16:13:03.848Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cb1b1687e3467830840954"
+  },
+  "nameProduct": "Balón de Fútbol Adidas Predator",
+  "descriptionProduct": "High-quality football designed for precision and control in all conditions.",
+  "price": 50,
+  "stock": 70,
+  "category": {
+    "$oid": "67cb199387e346783084092c"
+  },
+  "sold": 0,
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-07T16:13:10.646Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-07T16:13:10.646Z"
+  }
+}]

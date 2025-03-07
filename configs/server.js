@@ -12,6 +12,7 @@ import authRoutes from "../src/auth/auth.router.js"
 import categoryRoutes from "../src/category/category.router.js"
 import userRoutes from "../src/user/user.router.js"
 import productRoutes from "../src/product/product.routes.js"
+import shoppingCartRoutes from "../src/shoppingCart/shoppingCart.router.js"
 
 
 const middlewares = (app) => {
@@ -28,6 +29,7 @@ const routes = (app) => {
     app.use("/storeManagement/v1/category", categoryRoutes)
     app.use("/storeManagement/v1/user", userRoutes)
     app.use("/storeManagement/v1/product", productRoutes)
+    app.use("/storeManagement/v1/shoppingCart" ,shoppingCartRoutes)
 }
 
 const conectarDB = async () => {

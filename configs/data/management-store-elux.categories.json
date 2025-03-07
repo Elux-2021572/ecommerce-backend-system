@@ -1,0 +1,102 @@
+[{
+  "_id": {
+    "$oid": "67cb105b36ef9825ef2b4d79"
+  },
+  "nameCategory": "General Category",
+  "descriptionCategory": "This category groups products that do not have a specific classification.",
+  "status": true,
+  "dateCreation": {
+    "$date": "2025-03-07T15:27:23.317Z"
+  },
+  "createdAt": {
+    "$date": "2025-03-07T15:27:23.321Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-07T15:27:23.321Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cb197887e346783084091c"
+  },
+  "nameCategory": "Mechanics",
+  "descriptionCategory": "Cars and bikes",
+  "status": true,
+  "dateCreation": {
+    "$date": "2025-03-07T16:06:16.468Z"
+  },
+  "createdAt": {
+    "$date": "2025-03-07T16:06:16.469Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-07T16:06:16.469Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cb198187e3467830840920"
+  },
+  "nameCategory": "Electronics",
+  "descriptionCategory": "Gadgets, computers, and accessories",
+  "status": true,
+  "dateCreation": {
+    "$date": "2025-03-07T16:06:25.303Z"
+  },
+  "createdAt": {
+    "$date": "2025-03-07T16:06:25.303Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-07T16:06:25.303Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cb198787e3467830840924"
+  },
+  "nameCategory": "Home Appliances",
+  "descriptionCategory": "Kitchen and home gadgets",
+  "status": true,
+  "dateCreation": {
+    "$date": "2025-03-07T16:06:31.354Z"
+  },
+  "createdAt": {
+    "$date": "2025-03-07T16:06:31.354Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-07T16:06:31.354Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cb198d87e3467830840928"
+  },
+  "nameCategory": "Fashion",
+  "descriptionCategory": "Clothing, accessories, and shoes",
+  "status": true,
+  "dateCreation": {
+    "$date": "2025-03-07T16:06:37.718Z"
+  },
+  "createdAt": {
+    "$date": "2025-03-07T16:06:37.718Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-07T16:06:37.718Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cb199387e346783084092c"
+  },
+  "nameCategory": "Sports",
+  "descriptionCategory": "Equipment and gear for various sports",
+  "status": true,
+  "dateCreation": {
+    "$date": "2025-03-07T16:06:43.949Z"
+  },
+  "createdAt": {
+    "$date": "2025-03-07T16:06:43.949Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-07T16:06:43.949Z"
+  }
+}]
