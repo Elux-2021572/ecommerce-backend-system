@@ -50,14 +50,14 @@ export const deleteProductValidator = [
 
 export const getMostSoldProductsValidator = [
     validateJWT,
-    hasRoles("ADMIN_ROLE"),
+    hasRoles("ADMIN_ROLE", "USER_ROLE"),
     validateFields,
     handleErrors
 ]
 
 export const getSoldOutProductsValidator = [
     validateJWT,
-    hasRoles("ADMIN_ROLE"),
+    hasRoles("ADMIN_ROLE" , "USER_ROLE"),
     validateFields,
     handleErrors
 ]
