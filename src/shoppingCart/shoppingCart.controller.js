@@ -1,7 +1,6 @@
 import { ShoppingCart } from './shoppingCart.model.js';
 import Product from '../product/product.model.js';
 import Bill from '../bill/bill.model.js';
-import { generateInvoicePdf } from '../helpers/generate-bill.js';
 
 
 
