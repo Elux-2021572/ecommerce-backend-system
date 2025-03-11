@@ -29,6 +29,27 @@ JWT_SECRET=tu_secreto_super_seguro
 npm start
 ```
 
+### 5. Configuración por defecto
+
+## 👤 Administrador por defecto
+Al ejecutar el proyecto, se creará un administrador por defecto con las siguientes credenciales:
+
+- **Nombre:** Emilio Lux
+- **Usuario:** Kernel
+- **Email:** emiliojo.lux@gmail.com
+- **Contraseña:** EmLo06.20#
+- **Teléfono:** 12345678
+- **Rol:** ADMIN_ROLE
+
+> **Nota:** Es recomendable cambiar la contraseña del administrador por defecto después de la instalación.
+
+## 📂 Categoría por defecto
+Al iniciar el proyecto, se creará una categoría por defecto:
+
+- **Nombre:** General Category
+- **Descripción:** Esta categoría agrupa productos que no tienen una clasificación específica.
+
+
 ## 📌 Rutas disponibles
 
 ### 1. Autenticación
