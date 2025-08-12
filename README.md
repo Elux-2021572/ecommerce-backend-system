@@ -1,109 +1,141 @@
-# Proyecto Bimestre
-Este proyecto se centra en el desarrollo de una API web implementada en NodeJS, destinada a gestionar el registro de ventas, productos en línea y otras operaciones comerciales de una empresa. La aplicación se estructura en dos secciones principales: administrador y cliente, cada uno con funcionalidades específicas.
+# 🛒 E-Commerce Backend System
 
-## 🚀 Instalación y Configuración
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Node.js](https://img.shields.io/badge/Node.js-v16+-green.svg)
+![Express](https://img.shields.io/badge/Express-v4.x-lightgrey.svg)
+![MongoDB](https://img.shields.io/badge/MongoDB-v5+-blue.svg)
 
-### 1. Clonar el repositorio
+A comprehensive web API developed in NodeJS designed to manage sales, online products, and other business operations. The application is structured into two main sections: administrator and client, each with specific functionalities.
+
+## ✨ Features
+
+- **User Authentication**: Secure JWT-based authentication system
+- **Role-Based Access Control**: Admin and client role separation
+- **Product Management**: Add, update, delete, and list products
+- **Category Management**: Organize products in customizable categories
+- **Shopping Cart**: Complete shopping cart functionality
+- **Sales Reporting**: Track best-selling products and inventory status
+- **User Management**: Update profiles, change roles, and manage accounts
+
+## 🛠️ Technologies Used
+
+- **Node.js**: Server-side JavaScript runtime
+- **Express**: Web application framework
+- **MongoDB**: NoSQL database for data storage
+- **JWT**: JSON Web Tokens for secure authentication
+- **Mongoose**: MongoDB object modeling for Node.js
+
+## 🚀 Installation and Setup
+
+### 1. Clone the repository
 ```bash
-git clone https://github.com/tu-usuario/management-store.git
-cd management-store
+git clone https://github.com/Elux-2021572/ecommerce-backend-system.git
+cd ecommerce-backend-system
 ```
 
-### 2. Instalar dependencias
+### 2. Install dependencies
 ```bash
 npm install
 ```
 
-### 3. Configurar variables de entorno
-Crea un archivo `.env` en la raíz del proyecto con el siguiente contenido:
+### 3. Configure environment variables
+Create a `.env` file in the root directory with the following content:
 ```env
 PORT=3001
-MONGO_URI=mongodb://localhost:27017/management-store
-JWT_SECRET=tu_secreto_super_seguro
+MONGO_URI=mongodb://localhost:27017/ecommerce-backend
+JWT_SECRET=your_super_secure_secret
 ```
 
-> **Nota:** Cambia los valores según tu configuración.
+> **Note:** Change the values according to your configuration.
 
-### 4. Ejecutar el servidor
+### 4. Run the server
 ```bash
 npm start
 ```
 
-### 5. Configuración por defecto
+## ⚙️ Default Configuration
 
-## 👤 Administrador por defecto
-Al ejecutar el proyecto, se creará un administrador por defecto con las siguientes credenciales:
+### Default Administrator
+When running the project for the first time, a default administrator will be created with the following credentials:
 
-- **Nombre:** Emilio Lux
-- **Usuario:** Kernel
+- **Name:** Emilio Lux
+- **Username:** Kernel
 - **Email:** emiliojo.lux@gmail.com
-- **Contraseña:** EmLo06.20#
-- **Teléfono:** 12345678
-- **Rol:** ADMIN_ROLE
+- **Password:** EmLo06.20#
+- **Phone:** 12345678
+- **Role:** ADMIN_ROLE
 
-> **Nota:** Es recomendable cambiar la contraseña del administrador por defecto después de la instalación.
+> **Note:** It is recommended to change the default administrator password after installation.
 
-## 📂 Categoría por defecto
-Al iniciar el proyecto, se creará una categoría por defecto:
+### Default Category
+When starting the project, a default category will be created:
 
-- **Nombre:** General Category
-- **Descripción:** Esta categoría agrupa productos que no tienen una clasificación específica.
+- **Name:** General Category
+- **Description:** This category groups products that do not have a specific classification.
 
+## 📌 Available Endpoints
 
-## 📌 Rutas disponibles
-
-### 1. Autenticación
+### 1. Authentication
 - **Login:** `POST /storeManagement/v1/auth/login`
-- **Registro de admin:** `POST /storeManagement/v1/auth/register/admin`
-- **Registro de usuario:** `POST /storeManagement/v1/auth/register`
+- **Admin Registration:** `POST /storeManagement/v1/auth/register/admin`
+- **User Registration:** `POST /storeManagement/v1/auth/register`
 
-### 2. Categorías
-- **Agregar categoría:** `POST /storeManagement/v1/category/addCategory`
-- **Obtener categorías:** `GET /storeManagement/v1/category/`
-- **Actualizar categoría:** `PATCH /storeManagement/v1/category/updateCategory/:id`
-- **Eliminar categoría:** `DELETE /storeManagement/v1/category/deleteCategory/:id`
+### 2. Categories
+- **Add Category:** `POST /storeManagement/v1/category/addCategory`
+- **Get Categories:** `GET /storeManagement/v1/category/`
+- **Update Category:** `PATCH /storeManagement/v1/category/updateCategory/:id`
+- **Delete Category:** `DELETE /storeManagement/v1/category/deleteCategory/:id`
 
-### 3. Usuarios
-- **Actualizar usuario (ADMIN):** `PUT /storeManagement/v1/user/updateUser/admin/:id`
-- **Actualizar perfil usuario:** `PUT /storeManagement/v1/user/updateProfile/:id`
-- **Eliminar usuario (ADMIN):** `DELETE /storeManagement/v1/user/deleteUser/admin/:id`
-- **Eliminar perfil de usuario:** `DELETE /storeManagement/v1/user/deleteProfile/:id`
-- **Cambiar rol usuario:** `PATCH /storeManagement/v1/user/updateRol/admin/:id`
+### 3. Users
+- **Update User (ADMIN):** `PUT /storeManagement/v1/user/updateUser/admin/:id`
+- **Update User Profile:** `PUT /storeManagement/v1/user/updateProfile/:id`
+- **Delete User (ADMIN):** `DELETE /storeManagement/v1/user/deleteUser/admin/:id`
+- **Delete User Profile:** `DELETE /storeManagement/v1/user/deleteProfile/:id`
+- **Change User Role:** `PATCH /storeManagement/v1/user/updateRol/admin/:id`
 
-### 4. Productos
-- **Agregar producto:** `POST /storeManagement/v1/product/addProduct`
-- **Listar productos:** `GET /storeManagement/v1/product`
-- **Actualizar producto:** `PUT /storeManagement/v1/product/updateProduct/:id`
-- **Eliminar producto:** `DELETE /storeManagement/v1/product/deleteProduct/:id`
-- **Productos más vendidos:** `GET /storeManagement/v1/product/most-sold`
-- **Productos agotados:** `GET /storeManagement/v1/product/out-of-stock`
+### 4. Products
+- **Add Product:** `POST /storeManagement/v1/product/addProduct`
+- **List Products:** `GET /storeManagement/v1/product`
+- **Update Product:** `PUT /storeManagement/v1/product/updateProduct/:id`
+- **Delete Product:** `DELETE /storeManagement/v1/product/deleteProduct/:id`
+- **Best-Selling Products:** `GET /storeManagement/v1/product/most-sold`
+- **Out-of-Stock Products:** `GET /storeManagement/v1/product/out-of-stock`
 
-###  5. Carrito de Compras
--**Agregar producto al carrito:** `POST /storeManagement/v1/shoppingCart/add`
+### 5. Shopping Cart
+- **Add Product to Cart:** `POST /storeManagement/v1/shoppingCart/add`
+- **List Cart Products:** `GET /storeManagement/v1/shoppingCart/`
+- **Remove Product from Cart:** `DELETE /storeManagement/v1/shoppingCart/delete`
 
--**Listar productos del carrito:** `GET /storeManagement/v1/shoppingCart/`
-
--**Eliminar producto del carrito:** `DELETE /storeManagement/v1/shoppingCart/delete`
-
-
-
-## 🔑 Uso de Tokens JWT
-Algunas rutas requieren autenticación mediante un token JWT. Se debe incluir en los headers de la petición:
+## 🔑 Using JWT Tokens
+Some routes require authentication via a JWT token. It should be included in the request headers:
 ```json
 {
-  "Authorization": "Bearer <tu_token_aquí>"
+  "Authorization": "Bearer <your_token_here>"
 }
 ```
 
-## 🛠 Tecnologías usadas
-- Node.js
-- Express
-- MongoDB
-- JWT (JSON Web Token)
+## 📖 Documentation
 
-## 📝 Notas adicionales
-- Asegúrate de tener MongoDB corriendo en `localhost` o configura `MONGO_URI`.
-- Para pruebas en **Postman**, importa la colección JSON proporcionada.
+Complete API documentation is available via Postman Collection. Import the provided JSON collection for detailed information on each endpoint.
 
-📌 **¡Listo! Ahora puedes probar la API y personalizarla según tus necesidades.**
+## 🤝 Contributing
 
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 👨‍💻 Author
+
+- **Elux-2021572** - [GitHub Profile](https://github.com/Elux-2021572)
+
+---
+
+Made with ❤️ by Elux-2021572
